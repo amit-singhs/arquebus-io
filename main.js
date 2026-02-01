@@ -14,6 +14,7 @@
     initSmoothScroll();
     initNavHighlight();
     initParallax();
+    initContactForm();
   }
 
   /**
@@ -127,6 +128,62 @@
           ticking = false;
         });
         ticking = true;
+      }
+    });
+  }
+
+  /**
+   * Contact Form Handler
+   */
+  function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('.form-submit');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const originalText = btnText.textContent;
+
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      submitBtn.style.opacity = '0.7';
+
+      // Collect form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      // Simulate sending (replace with actual endpoint)
+      // For Vercel, you can use: /api/contact
+      // For Formspree: https://formspree.io/f/YOUR_ID
+      try {
+        // Simulated delay for demo purposes
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Show success state
+        btnText.textContent = 'Message Sent!';
+        submitBtn.classList.add('success');
+        form.reset();
+
+        // Reset button after delay
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.classList.remove('success');
+        }, 3000);
+
+      } catch (error) {
+        // Show error state
+        btnText.textContent = 'Error. Try again.';
+        submitBtn.style.opacity = '1';
+
+        setTimeout(() => {
+          btnText.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 3000);
       }
     });
   }
