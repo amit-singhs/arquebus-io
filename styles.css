@@ -680,6 +680,82 @@ body {
   box-shadow: 0 0 40px rgba(196, 112, 60, 0.3);
 }
 
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.form-input {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--coal);
+  border: 1px solid var(--steel);
+  padding: var(--space-sm) var(--space-md);
+  transition: all 0.4s var(--ease-out-expo);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--ash);
+}
+
+.form-input:hover {
+  border-color: var(--smoke);
+}
+
+.form-input:focus {
+  border-color: var(--ember);
+  box-shadow: 0 0 20px rgba(196, 112, 60, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-submit {
+  align-self: flex-start;
+  margin-top: var(--space-sm);
+  gap: var(--space-sm);
+}
+
+.form-submit .btn-icon {
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.form-submit:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+.form-submit.success {
+  background: #4a9e6d;
+  border-color: #4a9e6d;
+}
+
+.form-submit:disabled {
+  cursor: not-allowed;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -841,6 +917,15 @@ body {
     flex-direction: column;
     gap: var(--space-xs);
     text-align: center;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .form-submit {
+    width: 100%;
+    justify-content: center;
   }
 }
 
