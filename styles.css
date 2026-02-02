@@ -151,7 +151,7 @@ input, textarea, button { font: inherit; }
   animation: charReveal 0.5s ease forwards;
 }
 
-/* Staggered character delays - generated via JS would be cleaner but CSS works */
+/* Staggered character delays - "Igniting the" (12 chars) */
 .char-wrap:nth-child(1) .char:nth-child(1) { animation-delay: 0.3s; }
 .char-wrap:nth-child(1) .char:nth-child(2) { animation-delay: 0.34s; }
 .char-wrap:nth-child(1) .char:nth-child(3) { animation-delay: 0.38s; }
@@ -160,32 +160,43 @@ input, textarea, button { font: inherit; }
 .char-wrap:nth-child(1) .char:nth-child(6) { animation-delay: 0.5s; }
 .char-wrap:nth-child(1) .char:nth-child(7) { animation-delay: 0.54s; }
 .char-wrap:nth-child(1) .char:nth-child(8) { animation-delay: 0.58s; }
+.char-wrap:nth-child(1) .char:nth-child(9) { animation-delay: 0.62s; }
+.char-wrap:nth-child(1) .char:nth-child(10) { animation-delay: 0.66s; }
+.char-wrap:nth-child(1) .char:nth-child(11) { animation-delay: 0.7s; }
+.char-wrap:nth-child(1) .char:nth-child(12) { animation-delay: 0.74s; }
 
-.char-wrap:nth-child(2) .char:nth-child(1) { animation-delay: 0.65s; }
-.char-wrap:nth-child(2) .char:nth-child(2) { animation-delay: 0.69s; }
-.char-wrap:nth-child(2) .char:nth-child(3) { animation-delay: 0.73s; }
-.char-wrap:nth-child(2) .char:nth-child(4) { animation-delay: 0.77s; }
-.char-wrap:nth-child(2) .char:nth-child(5) { animation-delay: 0.81s; }
-.char-wrap:nth-child(2) .char:nth-child(6) { animation-delay: 0.85s; }
-.char-wrap:nth-child(2) .char:nth-child(7) { animation-delay: 0.89s; }
-.char-wrap:nth-child(2) .char:nth-child(8) { animation-delay: 0.93s; }
-.char-wrap:nth-child(2) .char:nth-child(9) { animation-delay: 0.97s; }
+/* "spark of" (8 chars) */
+.char-wrap:nth-child(2) .char:nth-child(1) { animation-delay: 0.81s; }
+.char-wrap:nth-child(2) .char:nth-child(2) { animation-delay: 0.85s; }
+.char-wrap:nth-child(2) .char:nth-child(3) { animation-delay: 0.89s; }
+.char-wrap:nth-child(2) .char:nth-child(4) { animation-delay: 0.93s; }
+.char-wrap:nth-child(2) .char:nth-child(5) { animation-delay: 0.97s; }
+.char-wrap:nth-child(2) .char:nth-child(6) { animation-delay: 1.01s; }
+.char-wrap:nth-child(2) .char:nth-child(7) { animation-delay: 1.05s; }
+.char-wrap:nth-child(2) .char:nth-child(8) { animation-delay: 1.09s; }
 
-.char-wrap:nth-child(3) .char:nth-child(1) { animation-delay: 1.04s; }
-.char-wrap:nth-child(3) .char:nth-child(2) { animation-delay: 1.08s; }
-.char-wrap:nth-child(3) .char:nth-child(3) { animation-delay: 1.12s; }
-.char-wrap:nth-child(3) .char:nth-child(4) { animation-delay: 1.16s; }
-.char-wrap:nth-child(3) .char:nth-child(5) { animation-delay: 1.2s; }
-.char-wrap:nth-child(3) .char:nth-child(6) { animation-delay: 1.24s; }
-.char-wrap:nth-child(3) .char:nth-child(7) { animation-delay: 1.28s; }
-.char-wrap:nth-child(3) .char:nth-child(8) { animation-delay: 1.32s; }
-.char-wrap:nth-child(3) .char:nth-child(9) { animation-delay: 1.36s; }
+/* "adoption." (9 chars) */
+.char-wrap:nth-child(3) .char:nth-child(1) { animation-delay: 1.16s; }
+.char-wrap:nth-child(3) .char:nth-child(2) { animation-delay: 1.2s; }
+.char-wrap:nth-child(3) .char:nth-child(3) { animation-delay: 1.24s; }
+.char-wrap:nth-child(3) .char:nth-child(4) { animation-delay: 1.28s; }
+.char-wrap:nth-child(3) .char:nth-child(5) { animation-delay: 1.32s; }
+.char-wrap:nth-child(3) .char:nth-child(6) { animation-delay: 1.36s; }
+.char-wrap:nth-child(3) .char:nth-child(7) { animation-delay: 1.4s; }
+.char-wrap:nth-child(3) .char:nth-child(8) { animation-delay: 1.44s; }
+.char-wrap:nth-child(3) .char:nth-child(9) { animation-delay: 1.48s; }
 
 @keyframes charReveal {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Spark word styling - ember glow effect */
+.char.spark {
+  color: #D4582A;
+  text-shadow: 0 0 20px rgba(212, 88, 42, 0.3);
 }
 
 .hero-bottom {
