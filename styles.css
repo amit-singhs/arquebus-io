@@ -4,8 +4,8 @@
    ============================================== */
 
 :root {
-  --bg: #E8E3DC;
-  --bg-alt: #DDD8D0;
+  --bg: #FFFFFF;
+  --bg-alt: #FFFFFF;
   --fg: #2C2824;
   --fg-muted: #5A534C;
   --fg-faint: #8A837A;
@@ -636,7 +636,7 @@ input, textarea, button { font: inherit; }
 .contact-form input,
 .contact-form textarea {
   padding: 0.875rem 1rem;
-  background: #F5F2ED;
+  background: #FFFFFF;
   border: 1px solid var(--border);
   color: var(--fg);
   outline: none;
