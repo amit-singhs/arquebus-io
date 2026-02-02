@@ -13,8 +13,8 @@
   --accent-light: #5A7B6C;
   --border: #C8C2B8;
 
-  --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-serif: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --font-sans: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   --space: clamp(1rem, 4vw, 2rem);
   --space-lg: clamp(3rem, 8vw, 6rem);
