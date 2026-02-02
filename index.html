@@ -6,325 +6,155 @@
   <title>Arquebus — Precision Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
-  <div class="texture"></div>
-
-  <div class="loading-screen" id="loader">
-    <div class="loader-content">
-      <span class="loader-word">Arquebus</span>
-      <div class="loader-bar"><div class="loader-progress"></div></div>
-    </div>
-  </div>
-
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="logo">
-        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M16 2L4 8v16l12 6 12-6V8L16 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <path d="M16 8l-6 3v10l6 3 6-3V11l-6-3z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-          <circle cx="16" cy="16" r="2" fill="currentColor"/>
-        </svg>
-        <span class="logo-text">Arquebus</span>
-      </a>
-      <ul class="nav-menu">
-        <li><a href="#craft" class="nav-link">Craft</a></li>
-        <li><a href="#ethos" class="nav-link">Ethos</a></li>
-        <li><a href="#connect" class="nav-link">Connect</a></li>
-        <li><a href="https://github.com/ArcQuitectAr" target="_blank" rel="noopener" class="nav-link nav-link--external">GitHub</a></li>
-      </ul>
+  <header class="site-header">
+    <a href="#" class="site-logo">Arquebus</a>
+    <nav class="site-nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-bg">
-        <div class="hero-gradient"></div>
-        <div class="hero-lines">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
+      <div class="hero-intro">
+        <p>Software development firm — est. 2017</p>
       </div>
-
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span class="badge-text">Software Craftsmen</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="title-row">
-            <span class="title-word" data-delay="1">We</span>
-            <span class="title-word" data-delay="2">forge</span>
-          </span>
-          <span class="title-row">
-            <span class="title-word title-word--accent" data-delay="3">precision</span>
-          </span>
-          <span class="title-row">
-            <span class="title-word" data-delay="4">instruments.</span>
-          </span>
-        </h1>
-
-        <p class="hero-desc">
-          Building foundational software for the decentralized era.
-          Every line of code, deliberate. Every interface, considered.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#craft" class="btn btn--primary">
-            <span>View Our Craft</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="#connect" class="btn btn--ghost">Get in Touch</a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="visual-orb">
-          <div class="orb-ring orb-ring--1"></div>
-          <div class="orb-ring orb-ring--2"></div>
-          <div class="orb-ring orb-ring--3"></div>
-          <div class="orb-core"></div>
-        </div>
-        <div class="visual-particles">
-          <span class="particle"></span>
-          <span class="particle"></span>
-          <span class="particle"></span>
-          <span class="particle"></span>
-          <span class="particle"></span>
-        </div>
-      </div>
-
-      <div class="scroll-hint">
-        <span class="scroll-text">Scroll</span>
-        <div class="scroll-line">
-          <span class="scroll-dot"></span>
-        </div>
+      <h1 class="hero-headline">
+        <span class="line">We craft tools</span>
+        <span class="line">for builders of the</span>
+        <span class="line"><em>decentralized</em> future.</span>
+      </h1>
+      <div class="hero-footer">
+        <a href="#work" class="text-link">See our work ↓</a>
       </div>
     </section>
 
-    <section id="craft" class="section section--craft">
-      <header class="section-header">
-        <span class="section-label">01 — Our Craft</span>
-        <h2 class="section-title">Tools We've Built</h2>
-      </header>
-
-      <div class="project-showcase">
-        <article class="project-card">
-          <div class="card-glow"></div>
-          <div class="card-content">
-            <div class="card-header">
-              <span class="card-tag">Flagship</span>
-              <span class="card-year">2018 — Present</span>
-            </div>
-
-            <h3 class="card-title">Galleon</h3>
-            <p class="card-subtitle">Tezos Wallet Infrastructure</p>
-
-            <p class="card-desc">
-              A deployment of Tezori (T2), an open source desktop wallet framework
-              for the Tezos blockchain. Built on Cryptonomic infrastructure for those
-              who demand security without sacrificing usability.
-            </p>
-
-            <ul class="card-features">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Hardware signing via Ledger</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Localized in 8 languages</span>
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M13.5 4.5L6 12 2.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>macOS, Windows, Linux & iOS</span>
-              </li>
-            </ul>
-
-            <div class="card-actions">
-              <a href="https://cryptonomic.tech/galleon.html" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-                <span>Download</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 13L13 1M13 1H5M13 1v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-              <a href="https://github.com/Cryptonomic/T2" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View Source</a>
-            </div>
-          </div>
-
-          <div class="card-visual">
-            <div class="app-window">
-              <div class="window-bar">
-                <span class="window-dot window-dot--red"></span>
-                <span class="window-dot window-dot--yellow"></span>
-                <span class="window-dot window-dot--green"></span>
-              </div>
-              <div class="window-body">
-                <div class="app-sidebar">
-                  <div class="sidebar-item active"></div>
-                  <div class="sidebar-item"></div>
-                  <div class="sidebar-item"></div>
-                </div>
-                <div class="app-main">
-                  <div class="app-balance">
-                    <span class="balance-label">Total Balance</span>
-                    <span class="balance-value">
-                      <span class="balance-symbol">ꜩ</span>
-                      2,847.32
-                    </span>
-                  </div>
-                  <div class="app-chart">
-                    <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-                      <defs>
-                        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stop-color="var(--verdigris)" stop-opacity="0.3"/>
-                          <stop offset="100%" stop-color="var(--verdigris)" stop-opacity="0"/>
-                        </linearGradient>
-                      </defs>
-                      <path d="M0 50 Q25 45, 50 35 T100 25 T150 30 T200 15 V60 H0 Z" fill="url(#chartGrad)"/>
-                      <path d="M0 50 Q25 45, 50 35 T100 25 T150 30 T200 15" fill="none" stroke="var(--verdigris)" stroke-width="2"/>
-                    </svg>
-                  </div>
-                  <div class="app-list">
-                    <div class="list-item"><span></span><span></span></div>
-                    <div class="list-item"><span></span><span></span></div>
-                    <div class="list-item"><span></span><span></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+    <section id="work" class="section">
+      <div class="section-label">
+        <span class="label-num">01</span>
+        <span class="label-line"></span>
+        <span class="label-text">Work</span>
       </div>
-    </section>
 
-    <section id="ethos" class="section section--ethos">
-      <div class="ethos-bg"></div>
+      <article class="project">
+        <header class="project-header">
+          <div class="project-meta">
+            <span>Flagship</span>
+            <span>2018 — Present</span>
+          </div>
+          <h2 class="project-title">Galleon</h2>
+          <p class="project-type">Tezos Wallet</p>
+        </header>
 
-      <header class="section-header section-header--center">
-        <span class="section-label">02 — Our Ethos</span>
-        <h2 class="section-title">The Philosophy</h2>
-      </header>
-
-      <div class="ethos-content">
-        <blockquote class="ethos-quote">
-          <p>
-            <span class="quote-mark">"</span>The arquebus was a turning point—the first firearm
-            precise enough to change history. We carry that same spirit:
-            building instruments that shift paradigms.
+        <div class="project-details">
+          <p class="project-desc">
+            A deployment of Tezori (T2), an open source desktop wallet framework
+            for the Tezos blockchain. Built on Cryptonomic infrastructure for those
+            who demand security without sacrificing usability.
           </p>
+
+          <ul class="project-list">
+            <li>Hardware wallet support via Ledger</li>
+            <li>Available in 8 languages</li>
+            <li>macOS, Windows, Linux, iOS</li>
+          </ul>
+
+          <div class="project-actions">
+            <a href="https://cryptonomic.tech/galleon.html" class="btn" target="_blank" rel="noopener">Download</a>
+            <a href="https://github.com/Cryptonomic/T2" class="text-link" target="_blank" rel="noopener">Source →</a>
+          </div>
+        </div>
+
+        <figure class="project-image">
+          <div class="image-frame">
+            <div class="mock-window">
+              <div class="mock-bar"><i></i><i></i><i></i></div>
+              <div class="mock-content">
+                <div class="mock-sidebar"></div>
+                <div class="mock-main">
+                  <div class="mock-stat"></div>
+                  <div class="mock-chart"></div>
+                  <div class="mock-rows"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </article>
+    </section>
+
+    <section id="about" class="section section-about">
+      <div class="section-label">
+        <span class="label-num">02</span>
+        <span class="label-line"></span>
+        <span class="label-text">About</span>
+      </div>
+
+      <div class="about-content">
+        <blockquote class="about-quote">
+          "The arquebus was a turning point—the first firearm
+          precise enough to change history."
         </blockquote>
 
-        <div class="ethos-text">
+        <div class="about-text">
           <p>
-            We're a small collective of engineers who believe software should be
-            forged, not manufactured. Every function is deliberate. Every interface,
-            considered.
+            We carry that same spirit into software. A small collective of engineers
+            who believe tools should be forged, not manufactured.
           </p>
           <p>
-            Our focus remains blockchain infrastructure—the foundational tools that
-            enable others to build. We don't follow trends. We craft what endures.
+            Our focus: blockchain infrastructure. The foundational software that
+            enables others to build. We don't chase trends. We make things that last.
           </p>
         </div>
-      </div>
 
-      <div class="stats-row">
-        <div class="stat-card">
-          <span class="stat-number">2017</span>
-          <span class="stat-label">Founded</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-card">
-          <span class="stat-number">8+</span>
-          <span class="stat-label">Languages</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-card">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Platforms</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-card">
-          <span class="stat-number">∞</span>
-          <span class="stat-label">Dedication</span>
-        </div>
+        <ul class="about-facts">
+          <li><strong>2017</strong> Founded</li>
+          <li><strong>8+</strong> Languages supported</li>
+          <li><strong>3</strong> Platforms</li>
+        </ul>
       </div>
     </section>
 
-    <section id="connect" class="section section--connect">
-      <div class="connect-layout">
-        <div class="connect-info">
-          <header class="section-header">
-            <span class="section-label">03 — Connect</span>
-            <h2 class="section-title">Let's Build<br>Something Together</h2>
-          </header>
-          <p class="connect-desc">
-            Have a project that requires precision engineering?
-            We'd love to hear about it.
-          </p>
-          <div class="connect-details">
-            <a href="mailto:prashant@arquebus.io" class="detail-item">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <span>prashant@arquebus.io</span>
-            </a>
-          </div>
-        </div>
+    <section id="contact" class="section section-contact">
+      <div class="section-label">
+        <span class="label-num">03</span>
+        <span class="label-line"></span>
+        <span class="label-text">Contact</span>
+      </div>
+
+      <div class="contact-content">
+        <h2 class="contact-heading">Let's work together.</h2>
+        <p class="contact-sub">Have a project? We'd love to hear about it.</p>
 
         <form class="contact-form" id="contact-form">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required>
-            </div>
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">
-            <span class="btn-label">Send Message</span>
-            <span class="btn-loader">
-              <svg width="20" height="20" viewBox="0 0 20 20">
-                <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="40" stroke-dashoffset="10">
-                  <animateTransform attributeName="transform" type="rotate" from="0 10 10" to="360 10 10" dur="0.8s" repeatCount="indefinite"/>
-                </circle>
-              </svg>
-            </span>
-            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <label class="form-full">
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-submit">Send message</button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <span class="footer-logo">Arquebus</span>
-        <span class="footer-tagline">Precision instruments, carefully forged.</span>
-      </div>
-      <span class="footer-year">© 2024</span>
-    </div>
+  <footer class="site-footer">
+    <span>Arquebus © 2024</span>
+    <span>Built with intention.</span>
   </footer>
 
   <script src="main.js"></script>
