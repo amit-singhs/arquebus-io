@@ -4,14 +4,14 @@
    ============================================== */
 
 :root {
-  --bg: #FDFCFA;
-  --bg-alt: #F5F3EF;
-  --fg: #1A1A1A;
-  --fg-muted: #6B6B6B;
-  --fg-faint: #A3A3A3;
-  --accent: #2D5A4A;
-  --accent-light: #3D7A64;
-  --border: #E5E2DC;
+  --bg: #E8E3DC;
+  --bg-alt: #DDD8D0;
+  --fg: #2C2824;
+  --fg-muted: #5A534C;
+  --fg-faint: #8A837A;
+  --accent: #4A6B5C;
+  --accent-light: #5A7B6C;
+  --border: #C8C2B8;
 
   --font-serif: 'Instrument Serif', Georgia, serif;
   --font-sans: 'Manrope', system-ui, sans-serif;
@@ -61,24 +61,16 @@ input, textarea, button { font: inherit; }
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
 .logo-icon {
-  width: 48px;
-  height: 20px;
-  color: var(--fg);
-  transition: color 0.3s ease;
+  height: 32px;
+  width: auto;
+  transition: opacity 0.3s ease;
 }
 
 .site-logo:hover .logo-icon {
-  color: var(--accent);
-}
-
-.logo-text {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 400;
+  opacity: 0.7;
 }
 
 .site-nav {
@@ -202,49 +194,16 @@ input, textarea, button { font: inherit; }
   align-items: flex-end;
 }
 
-/* SVG Stroke Drawing Animation */
+/* Hero Logo */
 .hero-logo-large {
-  width: 200px;
-  color: var(--border);
   opacity: 0;
   animation: fadeIn 0.6s ease 1.5s forwards;
 }
 
-.hero-logo-large svg {
-  width: 100%;
-  height: auto;
-}
-
-.draw-path {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: drawStroke 1s ease forwards;
-  animation-delay: 1.6s;
-}
-
-.draw-path.delay-1 {
-  stroke-dasharray: 60;
-  stroke-dashoffset: 60;
-  animation-delay: 2s;
-}
-
-.draw-path.delay-2 {
-  stroke-dasharray: 20;
-  stroke-dashoffset: 20;
-  animation-delay: 2.3s;
-}
-
-.draw-circle {
-  stroke-dasharray: 30;
-  stroke-dashoffset: 30;
-  animation: drawStroke 0.5s ease forwards;
-  animation-delay: 2.5s;
-}
-
-@keyframes drawStroke {
-  to {
-    stroke-dashoffset: 0;
-  }
+.hero-logo-img {
+  height: 60px;
+  width: auto;
+  opacity: 0.4;
 }
 
 .scroll-cta {
@@ -280,7 +239,7 @@ input, textarea, button { font: inherit; }
 .marquee {
   background: var(--fg);
   color: var(--bg);
-  padding: 0.875rem 0;
+  padding: 1rem 0;
   overflow: hidden;
 }
 
@@ -480,6 +439,7 @@ input, textarea, button { font: inherit; }
   background: var(--bg-alt);
   padding: var(--space);
   border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .mock-window {
@@ -665,7 +625,7 @@ input, textarea, button { font: inherit; }
 .contact-form input,
 .contact-form textarea {
   padding: 0.875rem 1rem;
-  background: var(--bg);
+  background: #F5F2ED;
   border: 1px solid var(--border);
   color: var(--fg);
   outline: none;
@@ -675,7 +635,7 @@ input, textarea, button { font: inherit; }
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(45, 90, 74, 0.1);
+  box-shadow: 0 0 0 3px rgba(74, 107, 92, 0.15);
 }
 
 .contact-form textarea {
@@ -707,13 +667,14 @@ input, textarea, button { font: inherit; }
 }
 
 .footer-logo {
-  width: 40px;
-  color: var(--fg-faint);
+  display: flex;
+  align-items: center;
 }
 
-.footer-logo svg {
-  width: 100%;
-  height: auto;
+.footer-logo-img {
+  height: 24px;
+  width: auto;
+  opacity: 0.5;
 }
 
 /* ==============================================
