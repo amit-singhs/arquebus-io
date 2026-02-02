@@ -1,5 +1,6 @@
 /**
- * ARQUEBUS — Minimal Interactions
+ * ARQUEBUS — Interactions
+ * Section reveal, smooth scroll, form handling
  */
 
 (function() {
@@ -14,7 +15,7 @@
   }
 
   /**
-   * Section Reveal — Triggers line animation on scroll
+   * Section Reveal — Triggers animations when sections enter viewport
    */
   function initSectionReveal() {
     const sections = document.querySelectorAll('.section');
@@ -26,14 +27,15 @@
         }
       });
     }, {
-      threshold: 0.2
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
     });
 
     sections.forEach(section => observer.observe(section));
   }
 
   /**
-   * Smooth Scroll
+   * Smooth Scroll — Anchor link handling
    */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -57,7 +59,7 @@
   }
 
   /**
-   * Contact Form
+   * Contact Form — Submission handling
    */
   function initContactForm() {
     const form = document.getElementById('contact-form');

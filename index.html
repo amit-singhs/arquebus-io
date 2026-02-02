@@ -11,7 +11,16 @@
 </head>
 <body>
   <header class="site-header">
-    <a href="#" class="site-logo">Arquebus</a>
+    <a href="#" class="site-logo">
+      <svg class="logo-icon" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Arquebus (historical firearm) stylized icon -->
+        <path class="logo-barrel" d="M2 12h40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="logo-stock" d="M38 12c4 0 6 2 8 6l10 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="logo-trigger" d="M30 12v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle class="logo-muzzle" cx="4" cy="12" r="2" fill="currentColor"/>
+      </svg>
+      <span class="logo-text">Arquebus</span>
+    </a>
     <nav class="site-nav">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -21,18 +30,53 @@
 
   <main>
     <section class="hero">
-      <div class="hero-intro">
-        <p>Software development firm — est. 2017</p>
+      <div class="hero-top">
+        <p class="hero-tag">Software Development Firm</p>
+        <p class="hero-year">Est. 2017</p>
       </div>
+
       <h1 class="hero-headline">
-        <span class="line">We craft tools</span>
-        <span class="line">for builders of the</span>
-        <span class="line"><em>decentralized</em> future.</span>
+        <span class="char-wrap"><span class="char">W</span><span class="char">e</span><span class="char">&nbsp;</span><span class="char">c</span><span class="char">r</span><span class="char">a</span><span class="char">f</span><span class="char">t</span></span>
+        <span class="char-wrap"><span class="char">t</span><span class="char">o</span><span class="char">o</span><span class="char">l</span><span class="char">s</span><span class="char">&nbsp;</span><span class="char">f</span><span class="char">o</span><span class="char">r</span></span>
+        <span class="char-wrap"><span class="char">b</span><span class="char">u</span><span class="char">i</span><span class="char">l</span><span class="char">d</span><span class="char">e</span><span class="char">r</span><span class="char">s</span><span class="char">.</span></span>
       </h1>
-      <div class="hero-footer">
-        <a href="#work" class="text-link">See our work ↓</a>
+
+      <div class="hero-bottom">
+        <div class="hero-logo-large">
+          <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="draw-path" d="M4 24h80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path class="draw-path delay-1" d="M76 24c8 0 12 4 16 12l20 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="draw-path delay-2" d="M60 24v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle class="draw-circle" cx="8" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <a href="#work" class="scroll-cta">
+          <span>View our work</span>
+          <span class="arrow-down">↓</span>
+        </a>
       </div>
     </section>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Blockchain Infrastructure</span>
+        <span>—</span>
+        <span>Tezos</span>
+        <span>—</span>
+        <span>Open Source</span>
+        <span>—</span>
+        <span>Security First</span>
+        <span>—</span>
+        <span>Blockchain Infrastructure</span>
+        <span>—</span>
+        <span>Tezos</span>
+        <span>—</span>
+        <span>Open Source</span>
+        <span>—</span>
+        <span>Security First</span>
+        <span>—</span>
+      </div>
+    </div>
 
     <section id="work" class="section">
       <div class="section-label">
@@ -42,7 +86,7 @@
       </div>
 
       <article class="project">
-        <header class="project-header">
+        <header class="project-header slide-in-left">
           <div class="project-meta">
             <span>Flagship</span>
             <span>2018 — Present</span>
@@ -51,7 +95,7 @@
           <p class="project-type">Tezos Wallet</p>
         </header>
 
-        <div class="project-details">
+        <div class="project-details slide-in-left" style="--delay: 0.1s">
           <p class="project-desc">
             A deployment of Tezori (T2), an open source desktop wallet framework
             for the Tezos blockchain. Built on Cryptonomic infrastructure for those
@@ -70,7 +114,7 @@
           </div>
         </div>
 
-        <figure class="project-image">
+        <figure class="project-image slide-in-right">
           <div class="image-frame">
             <div class="mock-window">
               <div class="mock-bar"><i></i><i></i><i></i></div>
@@ -96,27 +140,29 @@
       </div>
 
       <div class="about-content">
-        <blockquote class="about-quote">
+        <blockquote class="about-quote clip-reveal">
           "The arquebus was a turning point—the first firearm
           precise enough to change history."
         </blockquote>
 
-        <div class="about-text">
-          <p>
-            We carry that same spirit into software. A small collective of engineers
-            who believe tools should be forged, not manufactured.
-          </p>
-          <p>
-            Our focus: blockchain infrastructure. The foundational software that
-            enables others to build. We don't chase trends. We make things that last.
-          </p>
-        </div>
+        <div class="about-grid">
+          <div class="about-text slide-in-left">
+            <p>
+              We carry that same spirit into software. A small collective of engineers
+              who believe tools should be forged, not manufactured.
+            </p>
+            <p>
+              Our focus: blockchain infrastructure. The foundational software that
+              enables others to build. We don't chase trends. We make things that last.
+            </p>
+          </div>
 
-        <ul class="about-facts">
-          <li><strong>2017</strong> Founded</li>
-          <li><strong>8+</strong> Languages supported</li>
-          <li><strong>3</strong> Platforms</li>
-        </ul>
+          <ul class="about-facts slide-in-right">
+            <li><strong>2017</strong> Founded</li>
+            <li><strong>8+</strong> Languages supported</li>
+            <li><strong>3</strong> Platforms</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -128,7 +174,7 @@
       </div>
 
       <div class="contact-content">
-        <h2 class="contact-heading">Let's work together.</h2>
+        <h2 class="contact-heading clip-reveal">Let's work together.</h2>
         <p class="contact-sub">Have a project? We'd love to hear about it.</p>
 
         <form class="contact-form" id="contact-form">
@@ -153,6 +199,14 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer-logo">
+      <svg viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 12h40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M38 12c4 0 6 2 8 6l10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 12v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="4" cy="12" r="2" fill="currentColor"/>
+      </svg>
+    </div>
     <span>Arquebus © 2024</span>
     <span>Built with intention.</span>
   </footer>
