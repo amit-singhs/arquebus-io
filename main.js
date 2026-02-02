@@ -1,78 +1,73 @@
 /**
- * ARQUEBUS — Interactive Enhancements
- * Scroll-based reveals and subtle interactions
+ * ARQUEBUS — Minimal Interactions
+ * Clean, purposeful enhancements
  */
 
 (function() {
   'use strict';
 
-  // Wait for DOM
   document.addEventListener('DOMContentLoaded', init);
 
   function init() {
     initScrollReveal();
     initSmoothScroll();
     initNavHighlight();
-    initParallax();
     initContactForm();
   }
 
   /**
-   * Scroll Reveal Animation
-   * Elements with .reveal class fade in when entering viewport
+   * Scroll Reveal — Staggered fade-in for sections
    */
   function initScrollReveal() {
-    // Add reveal class to elements we want to animate
-    const revealSelectors = [
-      '.section-header',
-      '.tool-card',
-      '.about-text > *',
-      '.about-stats .stat',
-      '.contact-inner > *'
+    const revealTargets = [
+      '.section-head',
+      '.project',
+      '.philosophy-lead',
+      '.philosophy-body',
+      '.philosophy-stats .stat',
+      '.contact-text',
+      '.contact-form'
     ];
 
-    revealSelectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach((el, index) => {
+    revealTargets.forEach(selector => {
+      document.querySelectorAll(selector).forEach((el, i) => {
         el.classList.add('reveal');
-        el.style.transitionDelay = `${index * 0.1}s`;
+        el.style.transitionDelay = `${i * 0.1}s`;
       });
     });
 
-    // Intersection Observer for reveal
-    const revealObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
     });
 
-    document.querySelectorAll('.reveal').forEach(el => {
-      revealObserver.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }
 
   /**
-   * Smooth scroll for anchor links
+   * Smooth Scroll — Anchor link handling
    */
   function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
 
-        const target = document.querySelector(targetId);
+        const target = document.querySelector(href);
         if (target) {
           e.preventDefault();
-          const offset = 100;
-          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
           window.scrollTo({
-            top: targetPosition,
+            top: top,
             behavior: 'smooth'
           });
         }
@@ -81,11 +76,11 @@
   }
 
   /**
-   * Highlight active nav section
+   * Navigation — Active section highlighting
    */
   function initNavHighlight() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
 
     if (!sections.length || !navLinks.length) return;
 
@@ -94,46 +89,21 @@
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
           navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.style.color = isActive ? 'var(--ink)' : '';
           });
         }
       });
     }, {
-      threshold: 0.3,
-      rootMargin: '-100px 0px -50% 0px'
+      threshold: 0.25,
+      rootMargin: '-80px 0px -50% 0px'
     });
 
     sections.forEach(section => observer.observe(section));
   }
 
   /**
-   * Subtle parallax effect on hero visual
-   */
-  function initParallax() {
-    const heroVisual = document.querySelector('.hero-visual');
-    if (!heroVisual) return;
-
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const scrolled = window.scrollY;
-          const rate = scrolled * 0.3;
-
-          if (scrolled < window.innerHeight) {
-            heroVisual.style.transform = `translateY(${rate}px)`;
-          }
-
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
-
-  /**
-   * Contact Form Handler
+   * Contact Form — Submission handling
    */
   function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -142,82 +112,40 @@
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
-      const submitBtn = form.querySelector('.form-submit');
-      const btnText = submitBtn.querySelector('.btn-text');
-      const originalText = btnText.textContent;
+      const btn = form.querySelector('.form-btn');
+      const label = btn.querySelector('.btn-label');
+      const originalText = label.textContent;
 
-      // Disable button and show loading state
-      submitBtn.disabled = true;
-      btnText.textContent = 'Sending...';
-      submitBtn.style.opacity = '0.7';
+      // Loading state
+      btn.disabled = true;
+      label.textContent = 'Sending...';
 
-      // Collect form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-
-      // Simulate sending (replace with actual endpoint)
-      // For Vercel, you can use: /api/contact
-      // For Formspree: https://formspree.io/f/YOUR_ID
       try {
-        // Simulated delay for demo purposes
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Simulate network request
+        await new Promise(resolve => setTimeout(resolve, 1200));
 
-        // Show success state
-        btnText.textContent = 'Message Sent!';
-        submitBtn.classList.add('success');
+        // Success
+        label.textContent = 'Sent!';
+        btn.classList.add('success');
         form.reset();
 
-        // Reset button after delay
+        // Reset after delay
         setTimeout(() => {
-          btnText.textContent = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = '1';
-          submitBtn.classList.remove('success');
-        }, 3000);
+          label.textContent = originalText;
+          btn.disabled = false;
+          btn.classList.remove('success');
+        }, 2500);
 
-      } catch (error) {
-        // Show error state
-        btnText.textContent = 'Error. Try again.';
-        submitBtn.style.opacity = '1';
+      } catch (err) {
+        // Error state
+        label.textContent = 'Failed. Retry?';
+        btn.disabled = false;
 
         setTimeout(() => {
-          btnText.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 3000);
+          label.textContent = originalText;
+        }, 2500);
       }
     });
   }
-
-  /**
-   * Optional: Add ember particle effect to forge core
-   * Uncomment to enable
-   */
-  /*
-  function initEmberParticles() {
-    const forgeCore = document.querySelector('.forge-core');
-    if (!forgeCore) return;
-
-    const createEmber = () => {
-      const ember = document.createElement('span');
-      ember.className = 'ember-particle';
-      ember.style.cssText = `
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: var(--ember-hot);
-        border-radius: 50%;
-        pointer-events: none;
-        animation: emberFloat 2s ease-out forwards;
-        left: ${50 + (Math.random() - 0.5) * 20}%;
-        bottom: 50%;
-      `;
-
-      forgeCore.parentElement.appendChild(ember);
-      setTimeout(() => ember.remove(), 2000);
-    };
-
-    setInterval(createEmber, 300);
-  }
-  */
 
 })();

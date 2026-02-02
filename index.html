@@ -3,203 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arquebus — We Make Tools</title>
+  <title>Arquebus — Precision Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="grid-overlay"></div>
+  <div class="grain"></div>
 
-  <nav class="nav">
-    <a href="#" class="nav-brand">
-      <span class="brand-mark">⚒</span>
-      <span class="brand-text">Arquebus</span>
-    </a>
-    <div class="nav-links">
-      <a href="#tools">Tools</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/ArcQuitectAr" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-content">
-      <p class="hero-label">Software Development Firm</p>
-      <h1 class="hero-title">
-        <span class="title-line" style="--delay: 0">We</span>
-        <span class="title-line" style="--delay: 1">Make</span>
-        <span class="title-line title-accent" style="--delay: 2">Tools.</span>
-      </h1>
-      <p class="hero-subtitle">
-        Precision-crafted software for the decentralized era.<br>
-        Building infrastructure that endures.
-      </p>
-      <div class="hero-cta">
-        <a href="#tools" class="btn btn-primary">View Our Work</a>
-        <a href="mailto:prashant@arquebus.io" class="btn btn-ghost">Get in Touch</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="forge-ring"></div>
-      <div class="forge-ring"></div>
-      <div class="forge-ring"></div>
-      <div class="forge-core"></div>
-    </div>
+  <header class="masthead">
+    <nav class="masthead-nav">
+      <a href="#" class="wordmark">Arquebus</a>
+      <div class="nav-rule"></div>
+      <ul class="nav-list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="https://github.com/ArcQuitectAr" target="_blank" rel="noopener">Source</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="tools" class="section section-tools">
-    <div class="section-header">
-      <span class="section-number">01</span>
-      <h2 class="section-title">Tools We've Forged</h2>
-    </div>
-
-    <article class="tool-card tool-featured">
-      <div class="tool-badge">Flagship</div>
-      <div class="tool-content">
-        <header class="tool-header">
-          <h3 class="tool-name">Galleon</h3>
-          <p class="tool-tagline">A software wallet for the Tezos blockchain</p>
-        </header>
-
-        <p class="tool-description">
-          A deployment of Tezori (T2), an open source desktop wallet framework
-          for Tezos, running on Cryptonomic infrastructure. Built for those who
-          demand security without sacrificing usability.
-        </p>
-
-        <ul class="tool-features">
-          <li>
-            <span class="feature-icon">◈</span>
-            <span>Hardware signing support via Ledger</span>
-          </li>
-          <li>
-            <span class="feature-icon">◈</span>
-            <span>Available in 8 languages</span>
-          </li>
-          <li>
-            <span class="feature-icon">◈</span>
-            <span>Cross-platform: Mac, Windows, Linux</span>
-          </li>
-          <li>
-            <span class="feature-icon">◈</span>
-            <span>Mobile app on the App Store</span>
-          </li>
-        </ul>
-
-        <div class="tool-actions">
-          <a href="https://cryptonomic.tech/galleon.html" class="btn btn-primary" target="_blank" rel="noopener">
-            Download Galleon
-          </a>
-          <a href="https://github.com/Cryptonomic/T2" class="btn btn-ghost" target="_blank" rel="noopener">
-            View Source
-          </a>
-        </div>
+  <main>
+    <section class="hero">
+      <div class="hero-col hero-col--left">
+        <span class="overline">Est. 2017</span>
+        <h1 class="hero-title">
+          <span class="title-word" data-delay="0">We</span>
+          <span class="title-word" data-delay="1">build</span>
+          <span class="title-word title-word--accent" data-delay="2">instruments</span>
+          <span class="title-word" data-delay="3">for the</span>
+          <span class="title-word" data-delay="4">decentralized</span>
+          <span class="title-word" data-delay="5">era.</span>
+        </h1>
       </div>
-      <div class="tool-visual">
-        <div class="wallet-mockup">
-          <div class="mockup-header">
-            <span class="mockup-dot"></span>
-            <span class="mockup-dot"></span>
-            <span class="mockup-dot"></span>
-          </div>
-          <div class="mockup-body">
-            <div class="mockup-sidebar">
-              <div class="mockup-nav-item active"></div>
-              <div class="mockup-nav-item"></div>
-              <div class="mockup-nav-item"></div>
-            </div>
-            <div class="mockup-main">
-              <div class="mockup-balance">
-                <span class="balance-label">Balance</span>
-                <span class="balance-amount">◎ 2,847.32</span>
-              </div>
-              <div class="mockup-chart"></div>
-              <div class="mockup-transactions">
-                <div class="tx-row"></div>
-                <div class="tx-row"></div>
-                <div class="tx-row"></div>
-              </div>
-            </div>
+      <div class="hero-col hero-col--right">
+        <div class="hero-aside">
+          <p class="hero-aside-text">
+            Software development firm specializing in blockchain infrastructure.
+            Every tool we make is deliberate, considered, enduring.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="link-arrow">See our work</a>
+            <a href="#contact" class="link-arrow">Get in touch</a>
           </div>
         </div>
-      </div>
-    </article>
-  </section>
-
-  <section id="about" class="section section-about">
-    <div class="section-header">
-      <span class="section-number">02</span>
-      <h2 class="section-title">The Smithy</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="about-lead">
-          The arquebus was a turning point—the first firearm precise enough to
-          change history. We carry that spirit: building tools that shift paradigms.
-        </p>
-        <p>
-          We're a small team of craftspeople who believe software should be forged,
-          not manufactured. Every line of code is deliberate. Every interface, considered.
-        </p>
-        <p>
-          Our focus is blockchain infrastructure—the foundational tools that let
-          others build. We don't chase trends. We build what lasts.
-        </p>
-      </div>
-      <div class="about-stats">
-        <div class="stat">
-          <span class="stat-value">2017</span>
-          <span class="stat-label">Founded</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">8+</span>
-          <span class="stat-label">Languages Supported</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">∞</span>
-          <span class="stat-label">Commitment to Quality</span>
+        <div class="hero-marker">
+          <span class="marker-line"></span>
+          <span class="marker-text">Scroll</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-contact">
-    <div class="contact-inner">
-      <h2 class="contact-title">Let's Build Something</h2>
-      <p class="contact-text">
-        Have a project that needs precision engineering?<br>
-        We'd love to hear about it.
-      </p>
-      <form class="contact-form" id="contact-form">
-        <div class="form-group">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project..." rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary form-submit">
-          <span class="btn-text">Send Message</span>
-          <span class="btn-icon">→</span>
-        </button>
-      </form>
+    <div class="divider">
+      <span class="divider-dot"></span>
+      <span class="divider-dot"></span>
+      <span class="divider-dot"></span>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span class="footer-brand">Arquebus © 2024</span>
-      <span class="footer-tagline">Forged with intention</span>
+    <section id="work" class="section section-work">
+      <header class="section-head">
+        <span class="section-index">01</span>
+        <h2 class="section-title">Selected Work</h2>
+      </header>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="project-year">2018—Present</span>
+          <span class="project-tag">Flagship Product</span>
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-name">Galleon</h3>
+          <p class="project-subtitle">Tezos Wallet Infrastructure</p>
+
+          <div class="project-body">
+            <p>
+              A deployment of Tezori (T2), an open source desktop wallet framework
+              for the Tezos blockchain. Built on Cryptonomic infrastructure for those
+              who demand security without sacrificing usability.
+            </p>
+
+            <ul class="project-features">
+              <li>Hardware signing via Ledger integration</li>
+              <li>Localized in eight languages</li>
+              <li>Cross-platform: macOS, Windows, Linux</li>
+              <li>Native mobile app on the App Store</li>
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <a href="https://cryptonomic.tech/galleon.html" target="_blank" rel="noopener" class="btn">
+              <span>Download</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 13L13 1M13 1H1M13 1V13" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Cryptonomic/T2" target="_blank" rel="noopener" class="btn btn--outline">
+              <span>View Source</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="project-visual">
+          <div class="visual-frame">
+            <div class="visual-window">
+              <div class="window-chrome">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="window-content">
+                <div class="wallet-ui">
+                  <div class="wallet-sidebar">
+                    <div class="wallet-nav-item active"></div>
+                    <div class="wallet-nav-item"></div>
+                    <div class="wallet-nav-item"></div>
+                  </div>
+                  <div class="wallet-main">
+                    <div class="wallet-balance">
+                      <span class="balance-label">Total Balance</span>
+                      <span class="balance-value">2,847.32 XTZ</span>
+                    </div>
+                    <div class="wallet-graph"></div>
+                    <div class="wallet-list">
+                      <div class="list-row"></div>
+                      <div class="list-row"></div>
+                      <div class="list-row"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Galleon Desktop v1.2</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="philosophy" class="section section-philosophy">
+      <header class="section-head">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Philosophy</h2>
+      </header>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-lead">
+          <p class="lead-text">
+            <span class="lead-dropcap">T</span>he arquebus was a turning point—the first
+            firearm precise enough to change history. We carry that same spirit into software:
+            precision instruments that shift paradigms.
+          </p>
+        </div>
+
+        <div class="philosophy-body">
+          <p>
+            We are a small collective of engineers who believe software should be
+            forged, not manufactured. Every function is deliberate. Every interface,
+            considered.
+          </p>
+          <p>
+            Our focus remains blockchain infrastructure—the foundational tools that
+            enable others to build. We don't follow trends. We craft what endures.
+          </p>
+        </div>
+
+        <aside class="philosophy-stats">
+          <div class="stat">
+            <span class="stat-figure">2017</span>
+            <span class="stat-label">Founded</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure">8+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-figure">3</span>
+            <span class="stat-label">Platforms</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <span class="section-index">03</span>
+          <h2 class="contact-headline">Let's build<br>something.</h2>
+          <p class="contact-subtext">
+            Have a project that requires precision engineering?<br>
+            We would love to hear about it.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn form-btn">
+            <span class="btn-label">Send Message</span>
+            <span class="btn-arrow">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="colophon-inner">
+      <span class="colophon-mark">Arquebus</span>
+      <span class="colophon-year">2024</span>
     </div>
+    <div class="colophon-tagline">Precision instruments, carefully made.</div>
   </footer>
 
   <script src="main.js"></script>
